@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+  overflow: hidden;
+}
+
+/* shared container */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* QUESTION SECTION */
+.question-container {
+  text-align: center;
+}
+
+.local-gif {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 1.8rem auto;
+  pointer-events: none;
+  animation: fadeSlideIn 1.2s ease forwards;
+}
+
+.question {
+  font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  text-align: center;
+  animation: fadeSlideIn 1.2s ease forwards;
+}
+
+/* BUTTONS */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 26px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background-color: #ff54a4;
+  color: white;
+  box-shadow: 0px 4px 15px rgba(255, 107, 129, 0.45);
+}
+
+.btn:hover {
+  background-color: #ffa4b1;
+  transform: scale(1.08);
+}
+
+.yes-btn {
+  right: 55%;
+}
+
+.no-btn {
+  left: 55%;
+}
+
+/* RESULT SECTION */
+.result-container {
+  display: none;
+  text-align: center;
+}
+
+.gif-result {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  animation: fadeSlideIn 1.2s ease forwards;
+}
+
+.result-container h2 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  animation: fadeSlideIn 1.2s ease forwards;
+}
+
+/* HEART LOADER */
+.cssload-main {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ANIMATION */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
